@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color:white;
+  padding-bottom: 15px;
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+#header h1{
+  font-size: 25px;
+  text-decoration: underline overline;
+  font-family: 'Poppins', sans-serif;
+}
+
+#header h4{
+  font-size: 14px;
+  border: 1px solid white;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.divider{
+  margin-left: 40px;
+  width: 2px;
+  height: 50px;
+  background-color: white;
+}
+
+#main_container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.crypto_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.10);
+  margin-top: 30px;
+  padding: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 80vw;
+}
+
+.crypto_container img{
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+.crypto_container div{
+  margin-right: 10vw;
+}
+
+p{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 2vw;
+}
+
+h6{
+  font-size: 14px;
+  min-width: 10vw;
+}
+
+.picto-crypto{
+  width: 60px;
+  height: 60px;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <h1>Cryptocurrencies</h1>
+     </div>
+
+    <div id="main_container">
+        <div class="crypto_container">
+          <img src="https://static.lacapsule.academy/practice/cryptomonnaies/bitcoin.png" alt="Bitcoin" class="picto-crypto">
+          <h6>Bitcoin</h6>
+          <div class="divider"></div>
+          <p>3 382,3€</p>
+        </div>
+    
+        <div class="crypto_container">
+          <img src="https://static.lacapsule.academy/practice/cryptomonnaies/ethereum.png" alt="ethereum" class="picto-crypto">
+          <h6>Ethereum</h6>
+          <div class="divider"></div>
+          <p>120,5€</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#header').innerHTML += `
+        <h4>Vous avez <span id="counter"></span> cryptomonnaies dans votre portefeuille</h4>
+`;
+
+        document.querySelector('#counter').textContent = document.querySelectorAll('.crypto_container').length;
+
+const cryptos = [
+    {
+        name: "Litecoin",
+        img: "https://static.lacapsule.academy/practice/cryptomonnaies/litecoin.png",
+        price: "0,2€",
+    },
+    {
+        name: "Ripple",
+        img: "https://static.lacapsule.academy/practice/cryptomonnaies/ripple.png",
+        price: "39,9€",
+    }
+]
+
+for (let i = 0; i < cryptos.length; i++) {
+    
+    document.querySelector('#main_container').innerHTML = document.querySelector('#main_container').innerHTML + `
+    <div class="crypto_container">
+              <img src=${cryptos[i].img} alt="Bitcoin" class="picto-crypto">
+              <h6>${cryptos[i].name}</h6>
+              <div class="divider"></div>
+              <p>${cryptos[i].price}</p>
+            </div>
+`;
+}
+    
+    </script>
+</body>
+</html>

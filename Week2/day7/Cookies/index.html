@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cookie {
+            width: 60px;
+            margin: 15px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+        <img class="cookie" src="https://static.lacapsule.academy/practice/cookies/cookie-1.jpg" alt="Cookie" />
+        <img class="cookie" src="https://static.lacapsule.academy/practice/cookies/cookie-1.jpg" alt="Cookie" />
+        <img class="cookie" src="https://static.lacapsule.academy/practice/cookies/cookie-1.jpg" alt="Cookie" />
+        <img class="cookie" src="https://static.lacapsule.academy/practice/cookies/cookie-1.jpg" alt="Cookie" />
+
+    <script>
+       
+       let cookies = document.querySelectorAll('.cookie');
+
+for (let i = 0; i < cookies.length; i++) {
+    cookies[i].addEventListener('click', function() {
+        if (this.src.indexOf('cookie-1') != -1) {
+            this.src = 'https://static.lacapsule.academy/practice/cookies/cookie-2.jpg';
+        } else {
+            this.remove();
+        }
+    });
+}
+    // SOLUTION ALTERNATIVE
+
+    //    const cookie = document.querySelectorAll('.cookie')
+    //    const newSrc = "https://static.lacapsule.academy/practice/cookies/cookie-2.jpg"
+
+    //     for (let i = 0; i < cookie.length; i++) {
+    //         cookie[i].addEventListener('click',
+    //         function () {
+    //             if(cookie[i].src.indexOf(newSrc)>=0){
+    //                 cookie[i].style.display = "none" 
+    //             } else if(cookie[i].src = "https://static.lacapsule.academy/practice/cookies/cookie-1.jpg"){
+    //                 this.src = newSrc
+    //             }
+                
+    //         }
+    //         );
+    //     }
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <img id="cat-run">
+
+    <script>
+
+function getCatImage(imgNumber) {
+	// Insert your code here
+	return `https://raw.githubusercontent.com/La-Capsule-Bootcamp/static/main/catwalk/cat-${imgNumber}.jpg`
+	
+}
+
+// Do not edit/remove code under this line
+let index = 1;
+setInterval(() => {
+	document.querySelector('#cat-run').src = getCatImage(index);
+	index++;
+	if (index > 10) {
+		index = 1;
+	}
+}, 100);
+
+    </script>
+</body>
+</html>

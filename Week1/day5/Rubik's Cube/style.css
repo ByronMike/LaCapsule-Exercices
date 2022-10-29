@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cube {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: solid 1px black;
+}
+
+.square {
+    height: 80px;
+    width: 80px;
+    margin: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.blue {
+   background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}

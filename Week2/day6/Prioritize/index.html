@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+#header {
+  text-align: center;
+}
+
+h1 {
+  margin: 30px;
+  font-size: 35px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.row {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 6%;
+  margin-right: 6%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.task {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.description {
+  width: 66%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 9px;
+  font-family: sans-serif;
+  border: 1px solid #7f8c8d;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.criticality {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14px;
+  font-family: monospace;
+  border-radius: 50px;
+  border: 1px solid #7f8c8d;
+
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Prioritize</h1>
+    </div>
+
+    <div id="container">
+        <div class="row">
+            <div class="task">TASK #1</div>
+            <div class="criticality">1</div>
+            <div class="description">Lancer un nouveau téléscope d'étude de l'univers.</div>
+        </div>
+
+        <div class="row">
+            <div class="task">TASK #2</div>
+            <div class="criticality">3</div>
+            <div class="description">Ravitailler la Station Spatiale Internationale.</div>
+        </div>
+
+        <div class="row">
+            <div class="task">TASK #3</div>
+            <div class="criticality">2</div>
+            <div class="description">Améliorer les systèmes de sauvetage des fusées Apollo.</div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #4</div>
+            <div class="criticality">4</div>
+            <div class="description">Remplacer le module à Oxygène de la Station Spatiale Internationale.</div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #5</div>
+            <div class="criticality">3</div>
+            <div class="description">Préparer la mission habitée pour la lune prévue en 2028.</div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #6</div>
+            <div class="criticality">3</div>
+            <div class="description">Cartographier Farout.</div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #7</div>
+            <div class="criticality">4</div>
+            <div class="description">Terminer les préparatifs de la première mission humanisée vers Mars prévue en 2024.</div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #8</div>
+            <div class="criticality">2</div>
+            <div class="description">Intercepter et dévier le Géocroiseur Apophis avant 2029.</div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #9</div>
+            <div class="criticality">2</div>
+            <div class="description">
+            Achever les tests d'Ariane.
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="task">TASK #10</div>
+            <div class="criticality">1</div>
+            <div class="description">Se préparer à la collision entre Andromède et la Voie Lactée dans 3,9 milliards d'années.</div>
+        </div>
+    </div>
+
+<script>
+
+
+const criti = document.querySelectorAll('.criticality');
+
+for (let i = 0 ; i < criti.length ; i++) {
+    if (criti[i].textContent == 4) {criti[i].style.backgroundColor="#2ecc71";
+    } else if (criti[i].textContent == 3) {criti[i].style.backgroundColor="#f1c40f";
+    } else if (criti[i].textContent == 2) {criti[i].style.backgroundColor="#e67e22";
+    } else if (criti[i].textContent == 1) {criti[i].style.backgroundColor="#e74c3c";
+    }
+}
+
+const rows = document.querySelectorAll('.row');
+const rowsChild = document.querySelectorAll('.row :nth-child(2)');
+for (let i = 0 ; i < rows.length ; i++) {
+    if (rowsChild[i].textContent > 2) {
+        rows[i].style.display="flex";
+    }
+ 
+}
+
+</script>
+</body>
+</html>
