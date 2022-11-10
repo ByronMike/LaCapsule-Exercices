@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cartstyle.css" />
+    <title>Cart</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="logo-container">
+          <a href="index.html" id="logo-link"><h1>TICKETHACK</h1></a>
+        </div>
+        <div id="menu">
+          <ul>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <!-- <div class="noBooking">
+          <div id="contenu">Not booking yet.</div>
+          <br />
+          <div id="contenu">Why not plan a trip ?</div>
+        </div> -->
+        <div class="cartList">
+          <div class="titreCart"><h2>My cart</h2></div>
+          <div class="NewTrip">
+            <div class="tripCart">
+              <p>
+                <span class="tripDepart">Paris</span> >
+                <span class="tripArrival">Lyon</span>
+              </p>
+              <p class="tripHours">16:23</p>
+              <p class="tripPrice">123€</p>
+              <button id="deleteBtn">X</button>
+            </div>
+            <div class="totalBlock">
+              <p>Total : 230€</p>
+              <button id="purchaseBtn">Purchase</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

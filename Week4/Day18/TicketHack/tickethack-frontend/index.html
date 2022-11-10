@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ticket hack</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="logo-container">
+          <h1>TICKETHACK</h1>
+        </div>
+        <div id="menu">
+          <ul>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <div class="titre">
+          <h1>Explore the world effortlessly by train !</h1>
+          <h4>
+            Compare, book and enjoy cheap prices for train tickets : your
+            journey stars on Tickethack.
+          </h4>
+        </div>
+        <div id="trajets">
+          <div class="searchCard">
+            <div>
+              <div class="divider"></div>
+            </div>
+            <input
+              id="searchDeparture"
+              type="text"
+              placeholder="Departure"
+              value="Paris"
+            />
+            <input
+              id="searchArrival"
+              type="text"
+              placeholder="Arrival"
+              value="Lyon"
+            />
+            <input id="searchDate" type="date" value="2022-11-08" />
+            <button id="searchBtn">Search</button>
+          </div>
+
+          <div class="resultCard">
+            <div class="result">
+              <img class="imagetrain" src="./images/train.png" />
+              <div class="divider"></div>
+              <div class="barresearch"></div>
+              <p>It's time to book your future trip.</p>
+            </div>
+            <!-- RESA PAS TROUVE
+            <div class="result">
+              <img class="imagetrain" src="./images/notfound.png" />
+              <div class="divider"></div>
+              <div class="barresearch"></div>
+              <p>No trip found.</p>
+            </div> -->
+            <!-- <div class="TripFounds">
+              <p>
+                <span class="tripDepart">Paris</span> >
+                <span class="tripArrival">Lyon</span>
+              </p>
+              <p class="tripHours">16:23</p>
+              <p class="tripPrice">123€</p>
+              <button class="tripBtn">Book</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
