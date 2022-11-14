@@ -5,7 +5,9 @@ require('../models/connection');
 const moment = require('moment');
 const Trip = require('../models/trips');
 
+// 
 router.get('/search/:departure/:arrival/:date', (req, res) => {
+
   const { departure, arrival, date } = req.params;
 
   Trip.find({
