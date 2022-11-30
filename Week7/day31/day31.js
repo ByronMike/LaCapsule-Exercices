@@ -7,7 +7,6 @@
 function generateBuddies(arr) {
     let buddyList = [];
     
-    // Insert your code here
     let length = arr.length / 2 
     
     for (let i = 0; i < length; i++) {
